@@ -1,31 +1,16 @@
-name: 构建博客
-on:
-  push:  # 指定触发事件
-    branches:
-      - main  # 指定触发 action 的分支
+name: 'GitHub Actions To Npm'
+
+on: [push, delete]
 
 jobs:
-  main:
+  mirror_to_gitee:
     runs-on: ubuntu-latest
-    steps:		
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-
-		# 执行依赖安装
-    - name: 安装依赖
-      run: |
-        npm install
-
-		# 执行构建步骤
-		- name: 构建
-      run: |
-			  npm run build
-
-    # 执行部署
-    - name: 发布到 NPM
-      uses: actions/setup-node@v1
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v1
+          # 执行部署
+      - name: 发布到 NPM
+        uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/  # 设置发包npm地址仓库
