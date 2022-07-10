@@ -1,0 +1,62 @@
+.qui {
+    @each $name in $nameMP {
+        &-#{$name} {
+
+            @each $map,
+            $v in $KVMap {
+
+                &-#{$map} {
+                    #{$name}: $v#{$Qpx};
+                }
+            }
+
+            @each $k in $mpMap {
+                &-#{$k} {
+
+                    @if $k==x {
+
+                        @each $map,
+                        $v in $KVMap {
+
+                            &-#{$map} {
+                                #{$name}-left: $v#{$Qpx};
+                                #{$name}-right: $v#{$Qpx};
+                            }
+                        }
+
+                    }
+
+                    @else if $k==y {
+
+                        @each $map,
+                        $v in $KVMap {
+
+                            &-#{$map} {
+                                #{$name}-top: $v#{$Qpx};
+                                #{$name}-bottom: $v#{$Qpx};
+                            }
+                        }
+                    }
+
+                    @else {
+
+                        @each $map,
+                        $v in $KVMap {
+
+                            &-#{$map} {
+                                #{$name}-#{$k}: $v#{$Qpx};
+                            }
+                        }
+
+                    }
+
+
+
+                }
+            }
+
+
+
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+//Magenta / 法式洋红明快、感性
+$magenta-map:(
+	1:$magenta-1,
+	2:$magenta-2,
+	3:$magenta-3,
+	4:$magenta-4,
+	5:$magenta-5,
+	6:$magenta-6,
+	7:$magenta-7,
+	8:$magenta-8,
+	9:$magenta-9,
+	10:$magenta-10
+);
+@each $parameter in 1,2,3,4,5,6,7,8,9,10 {
+	.bg-magenta-#{$parameter} {background-color: map-get($map: $magenta-map, $key: $parameter) !important;}
+	.color-magenta-#{$parameter} {color: map-get($map: $magenta-map, $key: $parameter) !important;}
+	.border-magenta-#{$parameter} {border-color: map-get($map: $magenta-map, $key: $parameter) !important;}
+}

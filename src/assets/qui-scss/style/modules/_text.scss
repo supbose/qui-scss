@@ -1,0 +1,62 @@
+.qui{
+        &-text {
+        @extend .qui-text-sm;
+        font-size: 20#{$Qpx};
+        line-height: 26#{$Qpx};
+
+        @each $k,
+        $v in $number {
+
+            //文本大小 行高
+            &-#{$k} {
+
+                font-size: #{$v}#{$Qpx} ;
+                line-height: #{$v+6}#{$Qpx};
+            }
+        }
+
+
+
+        @each $k,
+        $v in $fontWeight {
+
+            //字体粗细 
+            &-#{$k} {
+                font-weight: #{$v};
+            }
+        }
+
+        @each $k,
+        $v in $textAlign {
+
+            //文本对齐
+            &-#{$k} {
+                text-align: #{$v};
+            }
+        }
+
+
+
+        @each $k,
+        $v in $textDecoration {
+
+            //文本装饰
+            &-#{$k} {
+                text-decoration: #{$v};
+            }
+        }
+
+
+
+
+
+        @for $i from 1 through 5 {
+
+            // 超出行省略
+            &-lines-#{$i} {
+                @include lines(#{$i});
+            }
+        }
+
+    }
+}

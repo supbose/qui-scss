@@ -1,0 +1,118 @@
+.qui {
+    height: 100vh;
+
+    &-flex {
+        // display:flex 开始 
+        @include no-nvue;
+
+        @each $k,
+        $v in $flex {
+            &-#{$k} {
+                &-wrap {
+                    // ===超出换行===
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    flex-wrap: wrap !important;
+
+                    &-reverse {
+                        // 排布方向与flex-direction:row相反
+                        @include view;
+                        flex-direction: #{$v}-reverse !important;
+                        flex-wrap: wrap !important;
+                    }
+                }
+
+                &-nowrap {
+                    // 超出不换行
+                    @include view;
+                    @include hidden-break-all;
+                    flex-direction: #{$v} !important;
+                    flex-wrap: nowrap !important;
+
+                    &-reverse {
+                        // 排布方向与flex-direction:row相反
+                        @include view;
+                        @include hidden-break-all;
+                        flex-direction: #{$v}-reverse !important;
+                        flex-wrap: nowrap !important;
+                    }
+                }
+
+                &-start {
+                    // 是默认值，所有的 flex 成员项都排列在容器的前部（默认）
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    justify-content: flex-start !important;
+                }
+
+                &-end {
+                    // 成员项排列在容器的后部
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    justify-content: flex-end !important;
+                }
+
+                &-center {
+                    // 成员项排列在容器居中
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    justify-content: center !important;
+                }
+
+                &-space {
+                    &-between {
+                        // 横向两端对齐,位于各行之间留有空白的容器内
+                        @include view;
+                        flex-direction: #{$v} !important;
+                        justify-content: space-between !important;
+                    }
+
+                    &-around {
+                        // 横向两端对齐,位于各行之前、之间、之后都留有空白的容器内
+                        @include view;
+                        flex-direction: #{$v} !important;
+                        justify-content: space-around !important;
+                    }
+                }
+
+                &-top {
+                    // 则是上对齐，所有的成员项排列在容器顶部；
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    align-items: flex-start !important;
+                }
+
+                &-middle {
+                    // 是中间对齐，所有成员项都垂直地居中显示。
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    align-items: center !important;
+
+                    &-center {
+                        // 垂直居中
+                        @include view;
+                        flex-direction: #{$v} !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                    }
+                }
+
+                &-bottom {
+                    // 是底部对齐，所有成员项都垂直地居底显示。
+                    @include view;
+                    flex-direction: #{$v} !important;
+                    align-items: flex-end !important;
+                }
+            }
+        }
+
+        @for $i from 1 to 13 {
+            &#{$i} {
+                flex: $i !important;
+            }
+        }
+
+    }
+
+
+}

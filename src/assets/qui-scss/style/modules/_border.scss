@@ -1,0 +1,94 @@
+.qui{
+        &-divider {
+        border-width: $qui-divider-color-width#{$Qpx};
+        border-style: solid;
+        border-color: $qui-divider-color;
+
+        @each $k in $divider {
+            &-#{$k} {
+                border-#{$k}-width: $qui-divider-color-width#{$Qpx};
+                border-#{$k}-style: solid;
+                border-#{$k}-color: $qui-divider-color;
+
+            }
+
+        }
+    }
+
+    &-border {
+
+        @each $k,
+        $v in $borderSmap {
+            &-#{$k} {
+                border-style: #{$v} !important;
+
+            }
+
+        }
+
+        @each $k,
+        $v in $borderMap {
+            &-#{$k} {
+                border-width: #{$v+$Qpx} !important;
+
+            }
+
+        }
+
+        @each $k in $border {
+            &-#{$k} {
+
+                @each $key,
+                $vla in $borderMap {
+                    &-#{$key} {
+                        border-#{$k}-width: #{$vla+$Qpx} !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &-radius {
+
+        @each $k,
+        $v in $radiusMap {
+            &-#{$k} {
+                border-radius:#{$v+$Qpx};
+            }
+        }
+
+        @each $k,
+        $vla in $radius {
+            &-#{$k} {
+
+                @each $key,
+                $v in $radiusMap {
+                    &-#{$key} {
+                        border-#{$vla}-radius: #{$v+$Qpx};
+                    }
+                }
+            }
+        }
+    }
+
+        // 透明度
+    &-opacity {
+
+        @each $key in 0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100 {
+            &-#{$key} {
+                opacity: map-get($map: $opacity-map, $key: $key);
+            }
+        }
+    }
+}

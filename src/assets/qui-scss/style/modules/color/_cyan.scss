@@ -1,0 +1,19 @@
+
+//Cyan / 明青希望、坚强
+$cyan-map:(
+	1:$cyan-1,
+	2:$cyan-2,
+	3:$cyan-3,
+	4:$cyan-4,
+	5:$cyan-5,
+	6:$cyan-6,
+	7:$cyan-7,
+	8:$cyan-8,
+	9:$cyan-9,
+	10:$cyan-10
+);
+@each $parameter in 1,2,3,4,5,6,7,8,9,10 {
+	.bg-cyan-#{$parameter} {background-color: map-get($map: $cyan-map, $key: $parameter) !important;}
+	.color-cyan-#{$parameter} {color: map-get($map: $cyan-map, $key: $parameter) !important;}
+	.border-cyan-#{$parameter} {border-color: map-get($map: $cyan-map, $key: $parameter) !important;}
+}
