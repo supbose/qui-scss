@@ -9,10 +9,10 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v1
           # 执行部署
-      - name: 发布到 NPM
+      - name: '发布到 NPM'
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 10
           registry-url: https://registry.npmjs.org/  # 设置发包npm地址仓库
       - run: npm publish # 执行发布
         env:
