@@ -1,0 +1,19 @@
+
+//Calendula Gold / 金盏花活力、积极
+$gold-map:(
+	1:$gold-1,
+	2:$gold-2,
+	3:$gold-3,
+	4:$gold-4,
+	5:$gold-5,
+	6:$gold-6,
+	7:$gold-7,
+	8:$gold-8,
+	9:$gold-9,
+	10:$gold-10
+);
+@each $parameter in 1,2,3,4,5,6,7,8,9,10 {
+	.bg-gold-#{$parameter} {background-color: map-get($map: $gold-map, $key: $parameter) !important;}
+	.color-gold-#{$parameter} {color: map-get($map: $gold-map, $key: $parameter) !important;}
+	.border-gold-#{$parameter} {border-color: map-get($map: $gold-map, $key: $parameter) !important;}
+}

@@ -1,0 +1,19 @@
+    $flex: (row: 'row', column: 'column');
+    $textAlign: (left:'left', center:'center', right:'right');
+    $fontWeight: (normal:'normal', bold:'bold');
+    $textDecoration: (underline:'underline', through:'line-through');
+    $number: (xs: $qui-text-xs, sm: $qui-text-sm, md:$qui-text-md, lg:$qui-text-lg, xl:$qui-text-xl, xxl:58);
+    $Qpx: $qui-px;
+    $KVMap: (xs:$qui-margin-padding-xs, sm:$qui-margin-padding-sm, md:$qui-margin-padding-md, lg:$qui-margin-padding-lg, xl:$qui-margin-padding-xl, xxl:$qui-margin-padding-xxl);
+    $mpMap: (top, bottom, left, right, x, y);
+    $nameMP: 'margin', 'padding';
+    $divider: (left, right, top, bottom);
+    $borderMap: (xs:$qui-border-width-xs, sm:$qui-border-width-sm, md:$qui-border-width-md, lg:$qui-border-width-lg, xl:$qui-border-width-xl, xxl:$qui-border-width-xxl);
+    $border: (left, right, top, bottom);
+    $radiusMap: (xs:$qui-border-radius-xs, sm:$qui-border-radius-sm, md:$qui-border-radius-md, lg:$qui-border-radius-lg, xl:$qui-border-radius-xl);
+    $radiusmini: (tr:'top-right', tl:'top-left', bl:'bottom-left', br:'bottom-right');
+    $radius: (top-right:'top-right', top-left:'top-left', bottom-left:'bottom-left', bottom-right:'bottom-right');
+    $borderSmap: (solid:'solid', dashed:'dashed', dotted:'dotted');
+    $opacity-map: (0:0, 10:0.1, 20:0.2, 30:0.3, 40:0.4, 50:0.5, 60:0.6, 70:0.7, 80:0.8, 90:0.9, 100:1);
+
+

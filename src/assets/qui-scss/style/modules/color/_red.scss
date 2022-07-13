@@ -1,0 +1,19 @@
+
+//Dust Red / 薄暮斗志、奔放
+$red-map:(
+	1:$red-1,
+	2:$red-2,
+	3:$red-3,
+	4:$red-4,
+	5:$red-5,
+	6:$red-6,
+	7:$red-7,
+	8:$red-8,
+	9:$red-9,
+	10:$red-10
+);
+@each $parameter in 1,2,3,4,5,6,7,8,9,10 {
+	.bg-red-#{$parameter} {background-color: map-get($map: $red-map, $key: $parameter) !important;}
+	.color-red-#{$parameter} {color: map-get($map: $red-map, $key: $parameter) !important;}
+	.border-red-#{$parameter} {border-color: map-get($map: $red-map, $key: $parameter) !important;}
+}

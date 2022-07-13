@@ -1,0 +1,107 @@
+//字符单位
+$qui-px:rpx;//小程序、uniapp修改为rpx
+$qui-uniapp:0;//是否是uniapp项目 0 不是 1 是
+$qui-mini:1;//是否是简写版本 0 不是 1 是
+
+
+//字符大小尺寸
+$qui-text-xs:26;
+$qui-text-sm:28;
+$qui-text-md:30;
+$qui-text-lg:32;
+$qui-text-xl:36;
+$qui-text-xxl:58;
+
+
+//边距
+$qui-margin-padding-xs:8;
+$qui-margin-padding-sm:16;
+$qui-margin-padding-md:24;
+$qui-margin-padding-lg:32;
+$qui-margin-padding-xl:40;
+$qui-margin-padding-xxl:58;
+
+//page color
+$page-color:#ffffff;
+
+//颜色
+$qui-color-primary: #007aff;
+$qui-color-success: #4cd964;
+$qui-color-warning: #f0ad4e;
+$qui-color-error: #dd524d;
+
+// 文字基本颜色
+$qui-text-color:#333;//基本色
+$qui-text-color-inverse:#fff;//反色
+$qui-text-color-grey:#999;//辅助灰色，如加载更多的提示信息
+$qui-text-color-placeholder: #808080;
+$qui-text-color-disable:#c0c0c0;
+
+// 背景颜色
+$qui-bg-color:#ffffff;
+$qui-bg-color-grey:#f8f8f8;
+$qui-bg-color-hover:#f1f1f1;//点击状态颜色
+$qui-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
+
+//边框颜色
+$qui-border-color:#c8c7cc;
+//边框宽度
+$qui-border-width-xs:2;
+$qui-border-width-sm:4;
+$qui-border-width-md:6;
+$qui-border-width-lg:8;
+$qui-border-width-xl:10;
+$qui-border-width-xxl:12;
+
+// 分割线颜色
+$qui-divider-color:#EBEEF5;//分割线颜色
+$qui-divider-color-width:2;
+
+// 尺寸变量
+
+// 文字尺寸
+$qui-font-size-sm:12px;
+$qui-font-size-base:14px;
+$qui-font-size-lg:16;
+
+// 图片尺寸
+$qui-img-size-sm:20px;
+$qui-img-size-base:26px;
+$qui-img-size-lg:40px;
+
+// Border Radius
+
+$qui-border-radius-xs: 4;
+$qui-border-radius-sm: 8;
+$qui-border-radius-md: 12;
+$qui-border-radius-lg: 16;
+$qui-border-radius-xl: 375;
+
+// 水平间距 
+$qui-spacing-row-sm: 5px;
+$qui-spacing-row-base: 10px;
+$qui-spacing-row-lg: 15px;
+
+// 垂直间距
+$qui-spacing-col-sm: 4px;
+$qui-spacing-col-base: 8px;
+$qui-spacing-col-lg: 12px;
+
+// 透明度
+$qui-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+// 文章场景相关
+$qui-color-title: #2C405A; // 文章标题颜色
+$qui-font-size-title:20px;
+$qui-color-subtitle: #555555; // 二级标题颜色
+$qui-font-size-subtitle:26px;
+$qui-color-paragraph: #3F536E; // 文章段落颜色
+$qui-font-size-paragraph:15px;
+
+
+
+
+
+
+
+

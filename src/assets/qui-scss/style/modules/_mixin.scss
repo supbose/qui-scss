@@ -1,0 +1,71 @@
+@mixin view {
+    @if $qui-uniapp==0 {
+        position: relative;
+        display: flex;
+    }
+
+    @else {
+        /* #ifndef APP-NVUE */
+        position: relative;
+        display: flex;
+        // flex-direction: column;
+        /* #endif */
+
+    }
+}
+
+@mixin hidden-break-all {
+    @if $qui-uniapp==0 {
+        overflow: hidden; //超出隐藏
+        word-break: break-all; //文本超出换行
+    }
+
+    @else {
+        /* #ifndef APP-NVUE */
+        overflow: hidden; //超出隐藏
+        word-break: break-all; //文本超出换行
+        /* #endif */
+    }
+
+}
+
+@mixin no-nvue {
+    @if $qui-uniapp==0 {
+        display: flex;
+    }
+
+    @else {
+        /* #ifndef APP-NVUE */
+        display: flex;
+        /* #endif */
+    }
+
+}
+
+@mixin grid {
+    display: grid;
+}
+
+@mixin lines($num) {
+    text-overflow: ellipsis;
+
+    @if $qui-uniapp==0 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $num;
+    }
+
+    @else {
+        /* #ifndef APP-PLUS-NVUE */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $num;
+        /* #endif */
+        /* #ifdef APP-PLUS-NVUE */
+        lines: $num; //Nvue使用注释打开这行
+        /* #endif */
+    }
+
+}

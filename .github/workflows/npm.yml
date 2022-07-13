@@ -1,6 +1,9 @@
 name: 'GitHub Actions To Npm'
 
-on: [push, delete]
+on: 
+  push:
+      tags:
+          - v*.*.*
 
 jobs:
   mirror_to_gitee:

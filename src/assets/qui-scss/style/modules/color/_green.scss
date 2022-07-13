@@ -1,0 +1,19 @@
+
+//Polar Green / 极光绿健康、创新
+$green-map:(
+	1:$green-1,
+	2:$green-2,
+	3:$green-3,
+	4:$green-4,
+	5:$green-5,
+	6:$green-6,
+	7:$green-7,
+	8:$green-8,
+	9:$green-9,
+	10:$green-10
+);
+@each $parameter in 1,2,3,4,5,6,7,8,9,10 {
+	.bg-green-#{$parameter} {background-color: map-get($map: $green-map, $key: $parameter) !important;}
+	.color-green-#{$parameter} {color: map-get($map: $green-map, $key: $parameter) !important;}
+	.border-green-#{$parameter} {border-color: map-get($map: $green-map, $key: $parameter) !important;}
+}
