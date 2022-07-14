@@ -11,7 +11,7 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { onMounted, onUpdated, onUnmounted, reactive, ref } from "vue";
+import { onMounted, onUpdated, onUnmounted, reactive } from "vue";
 const color = reactive([
   `blue`,
   `cyan`,
@@ -31,30 +31,43 @@ const color = reactive([
 
 console.log(color.length);
 
-onMounted(() => {
+onMounted((v) => {
+	
+	setTimeout(function() {
+		formatColor(v)
+	}, 3000);
+	
 });
+const formatColor=(v)=>{
+	console.log(v);
+	var test = document.getElementById(v)
+	
+	console.log(test.style);
+	// var demo = window.getComputedStyle(test, null); 
+	 
+	//获取节点的color
+	 
+	 // console.log(demo);
+}
 </script>
 
 <template>
-	<div class="qui-text-xs" v-for="(colorItem,index) in color">		
+	<div class="qui-text-xs" v-for="(colorItem, index) in color">
 		<div class="qui-flex-row-space-around">
-		  <div v-for="(item, index) in 10" class="qui-flex1">
-		    <div :class="[`bg-${colorItem}-${item}`,`qui-text`]">{{ `bg-${colorItem}-${item}` }}</div>
-			<!-- {{ `bg-${colorItem}-${item}` }} -->
-		  </div>
+			<div v-for="(item, index) in 10" class="qui-flex1">
+				<div :id="`bg-${colorItem}-${item}`" style="width: 20rpx;height: 30rpx;font-size: 24rpx;" :class="[`bg-${colorItem}-${item}`]">
+					{{ formatColor(`bg-${colorItem}-${item}`) }}
+				</div>
+			</div>
 		</div>
 	</div>
- 
 </template>
 
 <style lang="scss">
 // @import '../scss/index.scss';
-@import "../scss/css/index.css";
-.qui-divider-left {
-  border-left-width: thick;
-}
-.qui-text{
-	width: 100%;
-	height: 10rpx;
+@import '../scss/css/index.css';
+.qui-flex-row-space-around {
+	width: 700rpx;
+	height: 500rpx;
 }
 </style>
