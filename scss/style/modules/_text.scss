@@ -1,6 +1,6 @@
-.qui{
-        &-text {
-        @extend .qui-text-sm;
+.qui {
+    &-text {
+        // @extend .qui-text-sm;
         font-size: 20#{$Qpx};
         line-height: 26#{$Qpx};
 
@@ -9,8 +9,7 @@
 
             //文本大小 行高
             &-#{$k} {
-
-                font-size: #{$v}#{$Qpx} ;
+                font-size: #{$v}#{$Qpx};
                 line-height: #{$v+6}#{$Qpx};
             }
         }
