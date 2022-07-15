@@ -11,52 +11,40 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { onMounted, onUpdated, onUnmounted, reactive } from "vue";
-const color = reactive([
-  `blue`,
-  `cyan`,
-  `geekblue`,
-  `gold`,
-  `gray`,
-  `green`,
-  `lime`,
-  `magenta`,
-  `orange`,
-  `purple`,
-  `red`,
-  `theme`,
-  `volcano`,
-  `yellow`,
+import { onMounted, onUpdated, onUnmounted, reactive,ref,nextTick } from "vue";
+import color from "./command/color.js";
+const colorName = reactive([
+	`blue`,
+	`cyan`,
+	`geekblue`,
+	`gold`,
+	`gray`,
+	`green`,
+	`lime`,
+	`magenta`,
+	`orange`,
+	`purple`,
+	`red`,
+	`theme`,
+	`volcano`,
+	`yellow`,
 ]);
+onMounted(() => {
+	formatColor()
 
-console.log(color.length);
-
-onMounted((v) => {
-	
-	setTimeout(function() {
-		formatColor(v)
-	}, 3000);
-	
 });
-const formatColor=(v)=>{
-	console.log(v);
-	var test = document.getElementById(v)
-	
-	console.log(test.style);
-	// var demo = window.getComputedStyle(test, null); 
-	 
-	//获取节点的color
-	 
-	 // console.log(demo);
+const formatColor = (v) => {
+	return color[v]	
 }
+
 </script>
 
 <template>
-	<div class="qui-text-xs" v-for="(colorItem, index) in color">
+	<div v-for="(colorItem, index) in colorName" :key="index">
 		<div class="qui-flex-row-space-around">
-			<div v-for="(item, index) in 10" class="qui-flex1">
-				<div :id="`bg-${colorItem}-${item}`" style="width: 20rpx;height: 30rpx;font-size: 24rpx;" :class="[`bg-${colorItem}-${item}`]">
-					{{ formatColor(`bg-${colorItem}-${item}`) }}
+			<div v-for="(item, cindex) in 10" class="qui-flex1 qui-text qui-text-center qui-text-lines-1" :key="cindex">
+				<div :class="[`bg-${colorItem}-${item}`]">
+					{{ formatColor(`${colorItem}-${item}`) }}
 				</div>
 			</div>
 		</div>
@@ -64,10 +52,5 @@ const formatColor=(v)=>{
 </template>
 
 <style lang="scss">
-// @import '../scss/index.scss';
 @import '../scss/css/index.css';
-.qui-flex-row-space-around {
-	width: 700rpx;
-	height: 500rpx;
-}
 </style>
