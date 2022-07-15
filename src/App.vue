@@ -34,7 +34,6 @@ onMounted(() => {
 
 });
 const formatColor = (v) => {
-	return color[v]	
 }
 
 </script>
