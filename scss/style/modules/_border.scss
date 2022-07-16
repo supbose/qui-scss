@@ -1,12 +1,12 @@
 .qui{
         &-divider {
-        border-width: $qui-divider-color-width#{$Qpx};
+        border-width: #{$qui-divider-color-width}#{$Qpx};
         border-style: solid;
         border-color: $qui-divider-color;
 
         @each $k in $divider {
             &-#{$k} {
-                border-#{$k}-width: $qui-divider-color-width#{$Qpx};
+                border-#{$k}-width: #{$qui-divider-color-width}#{$Qpx};
                 border-#{$k}-style: solid;
                 border-#{$k}-color: $qui-divider-color;
 

@@ -6,7 +6,7 @@
             $v in $KVMap {
 
                 &-#{$map} {
-                    #{$name}: $v#{$Qpx};
+                    #{$name}: #{$v}#{$Qpx};
                 }
             }
 
@@ -19,8 +19,8 @@
                         $v in $KVMap {
 
                             &-#{$map} {
-                                #{$name}-left: $v#{$Qpx};
-                                #{$name}-right: $v#{$Qpx};
+                                #{$name}-left: #{$v}#{$Qpx};
+                                #{$name}-right: #{$v}#{$Qpx};
                             }
                         }
 
@@ -32,8 +32,8 @@
                         $v in $KVMap {
 
                             &-#{$map} {
-                                #{$name}-top: $v#{$Qpx};
-                                #{$name}-bottom: $v#{$Qpx};
+                                #{$name}-top: #{$v}#{$Qpx};
+                                #{$name}-bottom: #{$v}#{$Qpx};
                             }
                         }
                     }
@@ -44,7 +44,7 @@
                         $v in $KVMap {
 
                             &-#{$map} {
-                                #{$name}-#{$k}: $v#{$Qpx};
+                                #{$name}-#{$k}: #{$v}#{$Qpx};
                             }
                         }
 

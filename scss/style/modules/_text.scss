@@ -1,8 +1,7 @@
 .qui {
-    &-text {
-        // @extend .qui-text-sm;
-        font-size: 20#{$Qpx};
-        line-height: 26#{$Qpx};
+    &-text {      
+        font-size: #{20}#{$Qpx};
+        line-height: #{26}#{$Qpx};
 
         @each $k,
         $v in $number {
