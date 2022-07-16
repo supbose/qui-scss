@@ -6,7 +6,7 @@ on:
           - v*.*.*
 
 jobs:
-  mirror_to_gitee:
+  mirror_to_Npmjs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
