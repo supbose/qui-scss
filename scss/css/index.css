@@ -3,7 +3,7 @@
  * @Author: supbose yshxw@qq.com
  * @Date: 2022-07-09 11:43:16
  * @LastEditors: supbose yshxw@qq.com
- * @LastEditTime: 2022-07-28 20:11:03
+ * @LastEditTime: 2022-08-02 20:13:07
  * @FilePath: \qui-scss\scss\index.scss
  * @Description: 
  * 
@@ -216,6 +216,59 @@
 }
 .qui-flex12 {
   flex: 12 !important;
+}
+.qui-absolute {
+  position: absolute !important;
+}
+.qui-absolute-screen {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 998;
+}
+.qui-fixed {
+  position: fixed !important;
+}
+.qui-fixed-screen {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.qui-sticky {
+  position: sticky !important;
+  top: 0;
+  z-index: 969;
+}
+.qui-position-relative {
+  position: relative !important;
+}
+.qui-position-absolute {
+  position: absolute !important;
+}
+.qui-position-absolute-lt {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+}
+.qui-position-absolute-rt {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+.qui-position-absolute-lb {
+  position: absolute !important;
+  left: 0;
+  bottom: 0;
+}
+.qui-position-absolute-rb {
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
 }
 
 /*****************************************************************************************************
